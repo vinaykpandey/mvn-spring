@@ -20,10 +20,10 @@ public class MyAppController {
 	}
 	// REST API development
 	@RequestMapping(value = "", method = RequestMethod.GET)
-	public List Users() {
-		Map user = new HashMap<>();
+	public List<Object> Users() {
+		Map<Object, Object> user = new HashMap<>();
 		user.put("name", "Vinay");
-		List users = new ArrayList<>();
+		List<Object> users = new ArrayList<>(); // This list is object type
 		users.add(user);
 		return users;
 	}
