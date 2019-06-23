@@ -8,12 +8,17 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.env.Environment;
 
 @SpringBootApplication
 @Configuration
-@PropertySource({"classpath:database.properties", "classpath:email.properties"})
+//@PropertySource({"classpath:database.properties", "classpath:email.properties"})
+@PropertySources({
+	@PropertySource("classpath:database.properties"),
+	@PropertySource("classpath:email.properties"),
+})
 public class MyApp {
 	public static void main(String []args) {
 //		SpringApplication.run(MyApp.class, args);
